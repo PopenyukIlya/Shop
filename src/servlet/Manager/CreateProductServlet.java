@@ -1,4 +1,4 @@
-package servlet;
+package servlet.Manager;
 
 
 import java.io.IOException;

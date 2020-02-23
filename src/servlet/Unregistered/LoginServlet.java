@@ -1,4 +1,4 @@
-package servlet;
+package servlet.Unregistered;
 
 import java.io.IOException;
 import java.sql.Connection;
