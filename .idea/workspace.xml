@@ -6,26 +6,29 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/Manager/AddUserToBlacklist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9705f73e-87ca-4d79-a7ef-41e88cbbe875.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" afterDir="false" />
+    <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="make a few packages and classes for next development">
+      <change afterPath="$PROJECT_DIR$/src/servlet/Unregistered/RegistrationServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/CreateProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/DeleteProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/DeleteProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/EditProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/EditProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Unregistered/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Unregistered/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/ProductListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/ProductListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/UserInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/UserInfoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/_header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/_header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/loginView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/CreateProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/DeleteProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/EditProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/HomeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/ProductListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/servlet/UserInfoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/loginView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beans/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/CreateProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/DeleteProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/EditProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/HomeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/ProductListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/UserInfoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +69,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user_account: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -213,8 +223,17 @@
       <updated>1582271854475</updated>
       <workItem from="1582271858711" duration="1915000" />
       <workItem from="1582439121768" duration="11284000" />
-      <workItem from="1582470343127" duration="3626000" />
+      <workItem from="1582470343127" duration="3881000" />
+      <workItem from="1582575127596" duration="3482000" />
     </task>
+    <task id="LOCAL-00001" summary="make a few packages and classes for next development">
+      <created>1582474218359</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582474218359</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,10 +244,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="make a few packages and classes for next development" />
+    <option name="LAST_COMMIT_MESSAGE" value="make a few packages and classes for next development" />
   </component>
 </project>

@@ -56,6 +56,18 @@ public class DBUtils {
         return null;
     }
 
+    public static void insertUser(Connection conn, UserAccount userAccount) throws SQLException {
+        String sql = "Insert into user_account(USER_NAME, GENDER,PASSWORD) values (?,?,?)";
+
+        PreparedStatement pstm = conn.prepareStatement(sql);
+
+        pstm.setString(1, userAccount.getUserName());
+        pstm.setString(2, userAccount.getGender());
+        pstm.setString(3, userAccount.getPassword());
+
+        pstm.executeUpdate();
+    }
+
     public static List<Product> queryProduct(Connection conn) throws SQLException {
         String sql = "Select a.Code, a.Name, a.Price from Product a ";
 

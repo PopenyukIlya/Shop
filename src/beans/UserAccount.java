@@ -14,6 +14,12 @@ public class UserAccount {
 
     }
 
+    public UserAccount(String userName, String gender, String password) {
+        this.userName = userName;
+        this.gender = gender;
+        this.password = password;
+    }
+
     public String getUserName() {
         return userName;
     }
