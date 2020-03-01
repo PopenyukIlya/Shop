@@ -30,15 +30,13 @@
         </tr>
         <tr>
             <td colspan ="2">
-                <input type="submit" value= "Submit" />
-                <a href="${pageContext.request.contextPath}/">Cancel</a>
+                <input type="submit" value= "Log in" />
+                <a href="${pageContext.request.contextPath}/registration">Registration</a>
             </td>
         </tr>
     </table>
 </form>
-
 <p style="color:blue;">User Name: tom, password: tom001 or jerry/jerry001</p>
-
 <jsp:include page="_footer.jsp"></jsp:include>
 </body>
 </html>

@@ -18,7 +18,7 @@
 
 <table border="1" cellpadding="5" cellspacing="1" >
     <tr>
-        <th>Code</th>
+        <th>id</th>
         <th>Name</th>
         <th>Price</th>
         <th>Edit</th>
@@ -26,14 +26,17 @@
     </tr>
     <c:forEach items="${productList}" var="product" >
         <tr>
-            <td>${product.code}</td>
+            <td>${product.id}</td>
             <td>${product.name}</td>
             <td>${product.price}</td>
             <td>
-                <a href="editProduct?code=${product.code}">Edit</a>
+                <a href="addProduct?id=${product.id}">Add to cart</a>
             </td>
             <td>
-                <a href="deleteProduct?code=${product.code}">Delete</a>
+                <a href="editProduct?id=${product.id}">Edit</a>
+            </td>
+            <td>
+                <a href="deleteProduct?id=${product.id}">Delete</a>
             </td>
         </tr>
     </c:forEach>

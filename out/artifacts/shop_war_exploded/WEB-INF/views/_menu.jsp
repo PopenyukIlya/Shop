@@ -10,5 +10,6 @@
     <a href="${pageContext.request.contextPath}/userInfo">Мой аккаунт</a>
     |
     <a href="${pageContext.request.contextPath}/login">Войти</a>
-
+    |
+    <a href="${pageContext.request.contextPath}/logout">Выйти</a>
 </div>

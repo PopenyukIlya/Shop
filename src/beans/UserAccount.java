@@ -4,6 +4,9 @@ public class UserAccount {
 
     public static final String GENDER_MALE ="M";
     public static final String GENDER_FEMALE = "F";
+    public String role;
+
+
 
     private String userName;
     private String gender;
@@ -18,6 +21,21 @@ public class UserAccount {
         this.userName = userName;
         this.gender = gender;
         this.password = password;
+    }
+
+    public UserAccount(String role, String userName, String gender, String password) {
+        this.role = role;
+        this.userName = userName;
+        this.gender = gender;
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        role = role;
     }
 
     public String getUserName() {

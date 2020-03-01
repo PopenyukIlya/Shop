@@ -21,7 +21,7 @@
     <table border="0">
         <tr>
             <td>Code</td>
-            <td><input type="text" name="code" value="${product.code}" /></td>
+            <td><input name="id" value="${syze}" readonly/></td>
         </tr>
         <tr>
             <td>Name</td>

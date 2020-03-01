@@ -11,17 +11,20 @@
 <jsp:include page="_header.jsp"></jsp:include>
 <jsp:include page="_menu.jsp"></jsp:include>
 
-<h3>Home Page</h3>
+<h3>Начало</h3>
 
-This is demo Simple web application using jsp,servlet &amp; Jdbc. <br><br>
-<b>It includes the following functions:</b>
+<p>Это пример приложения где используются технологии Servlet, JSP и JDBC </p>
+<b>Done</b>
 <ul>
-    <li>Login</li>
-    <li>Storing user information in cookies</li>
-    <li>Product List</li>
-    <li>Create Product</li>
-    <li>Edit Product</li>
-    <li>Delete Product</li>
+    <li>Login,logout,registration by db.</li>
+    <li>Storing user information in cookies.</li>
+    <li>User that have role not null have func. in product list:create product, edit product, delete product.</li>
+</ul>
+<b>To do</b>
+<ul>
+    <li>User can add to cart products, and make a order</li>
+    <li></li>
+    <li></li>
 </ul>
 
 <jsp:include page="_footer.jsp"></jsp:include>

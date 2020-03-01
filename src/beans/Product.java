@@ -2,7 +2,7 @@ package beans;
 
 public class Product {
 
-    private String code;
+    private int id;
     private String name;
     private float price;
 
@@ -10,18 +10,18 @@ public class Product {
 
     }
 
-    public Product(String code, String name, float price) {
-        this.code = code;
+    public Product(int id, String name, float price) {
+        this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public String getCode() {
-        return code;
+    public int getId() {
+        return id;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

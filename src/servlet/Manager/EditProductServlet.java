@@ -30,14 +30,14 @@ public class EditProductServlet extends HttpServlet {
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
 
-        String code = (String) request.getParameter("code");
+        String id = (String) request.getParameter("id");
 
         Product product = null;
 
         String errorString = null;
 
         try {
-            product = DBUtils.findProduct(conn, code);
+            product = DBUtils.findProduct(conn, id);
         } catch (SQLException e) {
             e.printStackTrace();
             errorString = e.getMessage();
@@ -68,7 +68,7 @@ public class EditProductServlet extends HttpServlet {
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
 
-        String code = (String) request.getParameter("code");
+        int id =  Integer.parseInt(request.getParameter("id"));
         String name = (String) request.getParameter("name");
         String priceStr = (String) request.getParameter("price");
         float price = 0;
@@ -76,7 +76,7 @@ public class EditProductServlet extends HttpServlet {
             price = Float.parseFloat(priceStr);
         } catch (Exception e) {
         }
-        Product product = new Product(code, name, price);
+        Product product = new Product(id, name, price);
 
         String errorString = null;
 

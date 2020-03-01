@@ -1,8 +1,9 @@
-package servlet.Manager;
+package servlet.User;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
+import beans.Cart;
+import beans.UserAccount;
+import utils.DBUtils;
+import utils.MyUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,15 +11,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-import utils.DBUtils;
-import utils.MyUtils;
-
-@WebServlet(urlPatterns = { "/deleteProduct" })
-public class DeleteProductServlet extends HttpServlet {
+@WebServlet(urlPatterns = { "/addProduct" })
+public class AddToCart extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public DeleteProductServlet() {
+    public AddToCart() {
         super();
     }
 
@@ -26,16 +28,29 @@ public class DeleteProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
-
-        int id = Integer.parseInt(request.getParameter("id"));
+        HttpSession session = request.getSession();
+        DBUtils dbUtils=new DBUtils();
+        int product_id = Integer.parseInt(request.getParameter("id"));
 
         String errorString = null;
-
+        UserAccount loginedUser = MyUtils.getLoginedUser(session);
+        int user_account_id= 0;
         try {
-            DBUtils.deleteProduct(conn, id);
+            user_account_id = Integer.parseInt(dbUtils.findId(conn,loginedUser));
         } catch (SQLException e) {
             e.printStackTrace();
-            errorString = e.getMessage();
+        }
+        if (loginedUser == null) {
+            response.sendRedirect(request.getContextPath() + "/login");
+        }
+        Cart cart=new Cart();
+        cart.setProduct_id(product_id);
+        cart.setUser_account_id(user_account_id);
+        cart.setQuontity(1);
+        try {
+            DBUtils.addProduct(conn, cart);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
         // Если происходит ошибка, forward (перенаправить) к странице оповещающей ошибку.
@@ -60,5 +75,4 @@ public class DeleteProductServlet extends HttpServlet {
             throws ServletException, IOException {
         doGet(request, response);
     }
-
 }

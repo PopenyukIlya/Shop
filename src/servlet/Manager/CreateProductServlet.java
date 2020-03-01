@@ -4,6 +4,7 @@ package servlet.Manager;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,8 +12,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import beans.Product;
+import beans.UserAccount;
 import utils.DBUtils;
 import utils.MyUtils;
 
@@ -28,7 +31,30 @@ public class CreateProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        Connection conn = MyUtils.getStoredConnection(request);
+        HttpSession session = request.getSession();
+        String errorString = null;
+       int syze=0;
+        try {
+            syze = DBUtils.queryProduct(conn).size()+1;
+            DBUtils dbUtils=new DBUtils();
 
+            UserAccount loginedUser = MyUtils.getLoginedUser(session);
+            String role=dbUtils.findRole(conn,loginedUser);
+        if (loginedUser == null||role==null) {
+            // Redirect (Перенаправить) к странице login.
+            response.sendRedirect(request.getContextPath() + "/login");
+        }
+        // Сохранить информацию в request attribute перед тем как forward (перенаправить).
+        request.setAttribute("user", loginedUser);
+        request.setAttribute("errorString", errorString);
+        request.setAttribute("syze", syze);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            errorString = e.getMessage();
+
+            return;
+        }
         RequestDispatcher dispatcher = request.getServletContext()
                 .getRequestDispatcher("/WEB-INF/views/createProductView.jsp");
         dispatcher.forward(request, response);
@@ -41,7 +67,7 @@ public class CreateProductServlet extends HttpServlet {
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
 
-        String code = (String) request.getParameter("code");
+        int id =  Integer.parseInt(request.getParameter("id"));
         String name = (String) request.getParameter("name");
         String priceStr = (String) request.getParameter("price");
         float price = 0;
@@ -49,17 +75,12 @@ public class CreateProductServlet extends HttpServlet {
             price = Float.parseFloat(priceStr);
         } catch (Exception e) {
         }
-        Product product = new Product(code, name, price);
+        Product product = new Product(id, name, price);
 
         String errorString = null;
 
-        // Кодом продукта является строка [a-zA-Z_0-9]
-        // Имеет минимум 1 символ.
-        String regex = "\\w+";
 
-        if (code == null || !code.matches(regex)) {
-            errorString = "Product Code invalid!";
-        }
+
 
         if (errorString == null) {
             try {
