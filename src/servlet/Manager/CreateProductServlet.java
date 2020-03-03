@@ -37,24 +37,23 @@ public class CreateProductServlet extends HttpServlet {
        int syze=0;
         try {
             syze = DBUtils.queryProduct(conn).size()+1;
-            DBUtils dbUtils=new DBUtils();
-
+        } catch (SQLException e) {
+            e.printStackTrace();
+            errorString = e.getMessage();
+        }
             UserAccount loginedUser = MyUtils.getLoginedUser(session);
-            String role=dbUtils.findRole(conn,loginedUser);
-        if (loginedUser == null||role==null) {
+
+        if (loginedUser == null) {
             // Redirect (Перенаправить) к странице login.
             response.sendRedirect(request.getContextPath() + "/login");
+            return;
         }
         // Сохранить информацию в request attribute перед тем как forward (перенаправить).
         request.setAttribute("user", loginedUser);
         request.setAttribute("errorString", errorString);
         request.setAttribute("syze", syze);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            errorString = e.getMessage();
 
-            return;
-        }
+
         RequestDispatcher dispatcher = request.getServletContext()
                 .getRequestDispatcher("/WEB-INF/views/createProductView.jsp");
         dispatcher.forward(request, response);
@@ -76,11 +75,7 @@ public class CreateProductServlet extends HttpServlet {
         } catch (Exception e) {
         }
         Product product = new Product(id, name, price);
-
         String errorString = null;
-
-
-
 
         if (errorString == null) {
             try {
@@ -94,7 +89,6 @@ public class CreateProductServlet extends HttpServlet {
         // Сохранить информацию в request attribute перед тем как forward к views.
         request.setAttribute("errorString", errorString);
         request.setAttribute("product", product);
-
         // Если имеется ошибка forward (перенаправления) к странице 'edit'.
         if (errorString != null) {
             RequestDispatcher dispatcher = request.getServletContext()

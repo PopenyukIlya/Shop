@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <td colspan ="2">
-                <input type="submit" value= "Log in" />
+    <input type="submit" value= "Log in" />
                 <a href="${pageContext.request.contextPath}/registration">Registration</a>
             </td>
         </tr>

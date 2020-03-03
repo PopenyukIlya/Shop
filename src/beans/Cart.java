@@ -3,15 +3,15 @@ package beans;
 public class Cart {
     private int user_account_id;
     private int product_id;
-    private int quontity;
+    private int quantity;
 
     public Cart() {
     }
 
-    public Cart(int user_account_id, int product_id, int quontity) {
+    public Cart(int user_account_id, int product_id, int quantity) {
         this.user_account_id = user_account_id;
         this.product_id = product_id;
-        this.quontity = quontity;
+        this.quantity = quantity;
     }
 
     public int getUser_account_id() {
@@ -30,11 +30,11 @@ public class Cart {
         this.product_id = product_id;
     }
 
-    public int getQuontity() {
-        return quontity;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setQuontity(int quontity) {
-        this.quontity = quontity;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

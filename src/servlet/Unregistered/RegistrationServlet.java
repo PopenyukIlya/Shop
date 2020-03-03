@@ -1,6 +1,5 @@
 package servlet.Unregistered;
 
-import beans.Product;
 import beans.UserAccount;
 import utils.DBUtils;
 import utils.MyUtils;
@@ -11,7 +10,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -34,12 +32,12 @@ public class RegistrationServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws  IOException {
         Connection conn = MyUtils.getStoredConnection(request);
 
-        String userName = (String) request.getParameter("userName");
-        String gender = (String) request.getParameter("gender");
-        String password = (String) request.getParameter("password");
+        String userName =  request.getParameter("userName");
+        String gender =  request.getParameter("gender");
+        String password =  request.getParameter("password");
 
         UserAccount userAccount = new UserAccount(userName,gender,password);
 

@@ -21,6 +21,7 @@
         <th>id</th>
         <th>Name</th>
         <th>Price</th>
+        <th>Add to cart</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>

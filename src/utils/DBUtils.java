@@ -16,7 +16,7 @@ public class DBUtils {
     public static UserAccount findUser(Connection conn, //
                                        String userName, String password) throws SQLException {
 
-        String sql = "Select a.User_Name, a.Password, a.Gender,a.role from User_Account a " //
+        String sql = "Select a.id, a.Gender,a.role from User_Account a " //
                 + " where a.User_Name = ? and a.password= ?";
 
         PreparedStatement pstm = conn.prepareStatement(sql);
@@ -25,11 +25,14 @@ public class DBUtils {
         ResultSet rs = pstm.executeQuery();
 
         if (rs.next()) {
+
+            int id=rs.getInt("id");
             String gender = rs.getString("Gender");
             String role=rs.getString("role");
             UserAccount user = new UserAccount();
             user.setUserName(userName);
             user.setPassword(password);
+            user.setId(id);
             user.setGender(gender);
             user.setRole(role);
             return user;
@@ -38,16 +41,18 @@ public class DBUtils {
     }
 
     public static UserAccount findUser(Connection conn, String userName) throws SQLException {
-        String sql = "Select a.User_Name, a.Password, a.Gender, a.role from User_Account a "//
+        String sql = "Select a.id, a.Password, a.Gender, a.role from User_Account a "//
                 + " where a.User_Name = ? ";
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, userName);
         ResultSet rs = pstm.executeQuery();
         if (rs.next()) {
+            int id=rs.getInt("id");
             String password = rs.getString("Password");
             String gender = rs.getString("Gender");
             String role=rs.getString("role");
             UserAccount user = new UserAccount();
+            user.setId(id);
             user.setUserName(userName);
             user.setPassword(password);
             user.setGender(gender);
@@ -162,43 +167,61 @@ public class DBUtils {
     }
 
     public static void addProduct(Connection conn, Cart cart) throws SQLException {
-            String sql = "Insert into cart(user_account_id, product_id,quontity) values (?,?,?)";
+            String sql = "Insert into cart(user_account_id, product_id,quantity) values (?,?,?)";
 
             PreparedStatement pstm = conn.prepareStatement(sql);
 
             pstm.setInt(1, cart.getUser_account_id());
             pstm.setInt(2, cart.getProduct_id());
-            pstm.setInt(3, cart.getQuontity());
+            pstm.setInt(3, cart.getQuantity());
 
             pstm.executeUpdate();
 
     }
 
-    public String findRole(Connection conn, UserAccount loginedUser) throws SQLException {
-        String sql = "Select a.role from User_Account a "//
-                + " where a.User_Name = ? ";
+    public static List<Cart> findCart(Connection conn, UserAccount loginedUser) throws SQLException {
+        String sql = "Select a.user_account_id, a.product_id, a.quantity from cart a where user_account_id=?";
         PreparedStatement pstm = conn.prepareStatement(sql);
-        String userName=loginedUser.getUserName();
-        pstm.setString(1, userName);
+        int user_account_id=loginedUser.getId();
+        pstm.setInt(1, user_account_id);
         ResultSet rs = pstm.executeQuery();
-        if (rs.next()) {
-            String role=rs.getString("role");
-            return role;
+        List<Cart> list = new ArrayList<Cart>();
+        while (rs.next()) {
+            int product_id = rs.getInt("product_id");
+            int quantity = rs.getInt("quantity");
+            Cart cart = new Cart();
+            cart.setProduct_id(product_id);
+            cart.setQuantity(quantity);
+            list.add(cart);
         }
-        return null;
+        return list;
     }
 
-    public String findId(Connection conn, UserAccount loginedUser) throws SQLException {
-        String sql = "Select a.id from User_Account a "//
-                + " where a.User_Name = ? ";
-        PreparedStatement pstm = conn.prepareStatement(sql);
-        String userName=loginedUser.getUserName();
-        pstm.setString(1, userName);
-        ResultSet rs = pstm.executeQuery();
-        if (rs.next()) {
-            String id=rs.getString("id");
-            return id;
-        }
-        return null;
-    }
+//    public String findRole(Connection conn, UserAccount loginedUser) throws SQLException {
+//        String sql = "Select a.role from User_Account a "//
+//                + " where a.User_Name = ? ";
+//        PreparedStatement pstm = conn.prepareStatement(sql);
+//        String userName=loginedUser.getUserName();
+//        pstm.setString(1, userName);
+//        ResultSet rs = pstm.executeQuery();
+//        if (rs.next()) {
+//            String role=rs.getString("role");
+//            return role;
+//        }
+//        return null;
+//    }
+//
+//    public String findId(Connection conn, UserAccount loginedUser) throws SQLException {
+//        String sql = "Select a.id from User_Account a "//
+//                + " where a.User_Name = ? ";
+//        PreparedStatement pstm = conn.prepareStatement(sql);
+//        String userName=loginedUser.getUserName();
+//        pstm.setString(1, userName);
+//        ResultSet rs = pstm.executeQuery();
+//        if (rs.next()) {
+//            String id=rs.getString("id");
+//            return id;
+//        }
+//        return null;
+//    }
 }

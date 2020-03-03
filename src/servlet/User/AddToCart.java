@@ -29,24 +29,19 @@ public class AddToCart extends HttpServlet {
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
         HttpSession session = request.getSession();
-        DBUtils dbUtils=new DBUtils();
         int product_id = Integer.parseInt(request.getParameter("id"));
 
         String errorString = null;
         UserAccount loginedUser = MyUtils.getLoginedUser(session);
         int user_account_id= 0;
-        try {
-            user_account_id = Integer.parseInt(dbUtils.findId(conn,loginedUser));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        user_account_id = loginedUser.getId();
         if (loginedUser == null) {
             response.sendRedirect(request.getContextPath() + "/login");
         }
         Cart cart=new Cart();
         cart.setProduct_id(product_id);
         cart.setUser_account_id(user_account_id);
-        cart.setQuontity(1);
+        cart.setQuantity(1);
         try {
             DBUtils.addProduct(conn, cart);
         } catch (SQLException e) {

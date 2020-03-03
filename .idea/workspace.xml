@@ -7,36 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/beans/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/User/AddToCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/User/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/cartList.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/beans/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/beans/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/beans/UserAccount.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/createProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/createProductView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/editProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/editProductView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/homeView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/homeView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/loginView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/productListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/productListView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/userInfoView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beans/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/beans/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/UserAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Manager/DeleteProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/DeleteProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Manager/EditProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/EditProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Unregistered/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Unregistered/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/Unregistered/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Unregistered/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/User/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/AddToCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/User/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/CartServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/beans/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/beans/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/beans/UserAccount.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/_menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/_menu.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/createProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/createProductView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/editProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/editProductView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/homeView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/homeView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/loginView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/loginView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/productListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/productListView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userInfoView.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +68,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="cart: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="orders: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -245,7 +243,8 @@
       <workItem from="1582829647735" duration="655000" />
       <workItem from="1582871864600" duration="17967000" />
       <workItem from="1582986749308" duration="6917000" />
-      <workItem from="1583059414572" duration="5986000" />
+      <workItem from="1583059414572" duration="6047000" />
+      <workItem from="1583215667758" duration="16378000" />
     </task>
     <task id="LOCAL-00001" summary="make a few packages and classes for next development">
       <created>1582474218359</created>
@@ -261,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582578907673</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="day ?)):added cart.">
+      <created>1583094712120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583094712120</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,12 +289,49 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make a few packages and classes for next development" />
     <MESSAGE value="day 2:added registration." />
-    <option name="LAST_COMMIT_MESSAGE" value="day 2:added registration." />
+    <MESSAGE value="day ?)):added cart." />
+    <option name="LAST_COMMIT_MESSAGE" value="day ?)):added cart." />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/Unregistered/RegistrationServlet.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/DBUtils.java</url>
+          <line>196</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/User/CartServlet.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/Unregistered/LoginServlet.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/DBUtils.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="this.cookies" language="JAVA" />
+        <watch expression="list.get(2)" />
+        <watch expression="this.request" />
       </configuration>
     </watches-manager>
   </component>

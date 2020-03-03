@@ -32,14 +32,15 @@
         </tr>
         <tr>
             <td>Password</td>
-            <td><input type="text" name="password" value="${userAccount.password}" /></td>
+            <td><input type="password" name="password" value="${userAccount.password}" /></td>
         </tr>
         <tr>
             <td colspan="2">
                 <input type="submit" value="Submit" />
-                <a href="login">Cancel</a>
+
             </td>
         </tr>
+    <a href="login">Cancel</a>
 </form>
 
 <jsp:include page="_footer.jsp"></jsp:include>
