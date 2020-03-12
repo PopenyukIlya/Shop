@@ -15,8 +15,10 @@
 
 User Name: <b>${user.userName}</b>
 <br />
-Gender: ${user.gender } <br />
-<a href="${pageContext.request.contextPath}/checkout">Заказать</a>
+Gender: ${user.gender} <br />
+
+
+<a href="${pageContext.request.contextPath}/${link}">${linkName}</a>
 <jsp:include page="_footer.jsp"></jsp:include>
 
 </body>

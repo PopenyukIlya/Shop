@@ -25,7 +25,8 @@ public class UserInfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-
+        String link="cart";
+        String linkName="Корзина";
         // Проверить, вошел ли пользователь в систему (login) или нет.
         UserAccount loginedUser = MyUtils.getLoginedUser(session);
 
@@ -35,7 +36,15 @@ public class UserInfoServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
+        if (loginedUser.getRole()!=null){
+            link="admin";
+            linkName="Админское меню";
+        }
+
+
         // Сохранить информацию в request attribute перед тем как forward (перенаправить).
+        request.setAttribute("linkName", linkName);
+        request.setAttribute("link", link);
         request.setAttribute("user", loginedUser);
 
         // Если пользователь уже вошел в систему (login), то forward (перенаправить) к странице

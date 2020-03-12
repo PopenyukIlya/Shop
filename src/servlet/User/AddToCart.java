@@ -33,11 +33,14 @@ public class AddToCart extends HttpServlet {
 
         String errorString = null;
         UserAccount loginedUser = MyUtils.getLoginedUser(session);
+
+        if (loginedUser == null) {
+            // Redirect (Перенаправить) к странице login.
+            response.sendRedirect(request.getContextPath() + "/login");
+            return;
+        }
         int user_account_id= 0;
         user_account_id = loginedUser.getId();
-        if (loginedUser == null) {
-            response.sendRedirect(request.getContextPath() + "/login");
-        }
         Cart cart=new Cart();
         cart.setProduct_id(product_id);
         cart.setUser_account_id(user_account_id);

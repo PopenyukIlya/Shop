@@ -42,6 +42,8 @@ public class DeleteProductServlet extends HttpServlet {
         if (errorString != null) {
             // Сохранить информацию в request attribute перед тем как forward к views.
             request.setAttribute("errorString", errorString);
+
+
             //
             RequestDispatcher dispatcher = request.getServletContext()
                     .getRequestDispatcher("/WEB-INF/views/deleteProductErrorView.jsp");
@@ -50,7 +52,7 @@ public class DeleteProductServlet extends HttpServlet {
         // Если все хорошо.
         // Redirect (перенаправить) к странице со списком продуктов.
         else {
-            response.sendRedirect(request.getContextPath() + "/productList");
+            response.sendRedirect(request.getContextPath() + "/admin");
         }
 
     }

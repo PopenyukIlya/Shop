@@ -22,8 +22,6 @@
         <th>Name</th>
         <th>Price</th>
         <th>Add to cart</th>
-        <th>Edit</th>
-        <th>Delete</th>
     </tr>
     <c:forEach items="${productList}" var="product" >
         <tr>
@@ -33,17 +31,9 @@
             <td>
                 <a href="addProduct?id=${product.id}">Add to cart</a>
             </td>
-            <td>
-                <a href="editProduct?id=${product.id}">Edit</a>
-            </td>
-            <td>
-                <a href="deleteProduct?id=${product.id}">Delete</a>
-            </td>
         </tr>
     </c:forEach>
 </table>
-
-<a href="createProduct" >Create Product</a>
 
 <jsp:include page="_footer.jsp"></jsp:include>
 

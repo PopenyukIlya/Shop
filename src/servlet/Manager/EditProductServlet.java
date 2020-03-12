@@ -99,7 +99,7 @@ public class EditProductServlet extends HttpServlet {
         // Если все хорошо.
         // Redirect к странице со списком продуктов.
         else {
-            response.sendRedirect(request.getContextPath() + "/productList");
+            response.sendRedirect(request.getContextPath() + "/admin");
         }
     }
 

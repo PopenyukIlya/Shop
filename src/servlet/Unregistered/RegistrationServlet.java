@@ -15,7 +15,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 @WebServlet(urlPatterns = { "/registration" })
-public class RegistrationServlet extends HttpServlet{
+public class RegistrationServlet extends HttpServlet {
 
     public RegistrationServlet() {
         super();
@@ -32,22 +32,58 @@ public class RegistrationServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws  IOException {
+            throws IOException, ServletException {
         Connection conn = MyUtils.getStoredConnection(request);
 
-        String userName =  request.getParameter("userName");
-        String gender =  request.getParameter("gender");
-        String password =  request.getParameter("password");
+        String userName = request.getParameter("userName");
+        String gender = request.getParameter("gender");
+        String password = request.getParameter("password");
 
-        UserAccount userAccount = new UserAccount(userName,gender,password);
+        UserAccount userAccount = new UserAccount(userName, gender, password);
 
-        try {
-            DBUtils.insertUser(conn, userAccount);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        UserAccount user = null;
+        boolean hasError = false;
+        String errorString = null;
 
-        response.sendRedirect(request.getContextPath() + "/login");
-        }
+        if (userName == null || password == null || userName.length() == 0 || password.length() == 0) {
+            hasError = true;
+            errorString = "Required username and password!";
+            } else
+
+            try {
+                user = DBUtils.findUser(conn, userName);
+                if (user != null) {
+                    hasError = true;
+                    errorString = "This user already exist";
+                }
+                else {
+                    DBUtils.insertUser(conn, userAccount);
+                }
+                }  catch (SQLException e)
+            {
+                e.printStackTrace();
+                hasError = true;
+                errorString = e.getMessage();
+            }
+
+            if (hasError) {
+                user = new UserAccount();
+                user.setUserName(userName);
+                user.setPassword(password);
+
+                // Сохранить информацию в request attribute перед forward.
+                request.setAttribute("errorString", errorString);
+                request.setAttribute("user", user);
+
+                // Forward (перенаправить) к странице /WEB-INF/views/login.jsp
+                RequestDispatcher dispatcher //
+                        = this.getServletContext().getRequestDispatcher("/WEB-INF/views/registration.jsp");
+
+                dispatcher.forward(request, response);
+            }
+
+            response.sendRedirect(request.getContextPath() + "/login");
+
     }
+}
 

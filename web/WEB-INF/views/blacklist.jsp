@@ -1,24 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>User Info</title>
+    <title>Checkout</title>
 </head>
 <body>
 
 <jsp:include page="_header.jsp"></jsp:include>
 <jsp:include page="_menu.jsp"></jsp:include>
 
-<h3>Привет: ${user.userName}</h3>
-
-User Name: <b>${user.userName}</b>
-<br />
-Gender: ${user.gender} <br />
+<h3>List of Users</h3>
 
 
-<a href="${pageContext.request.contextPath}/${link}">${linkName}</a>
+
 <jsp:include page="_footer.jsp"></jsp:include>
 
 </body>

@@ -133,6 +133,24 @@ public class DBUtils {
         return null;
     }
 
+    public static Product findProductByName(Connection conn, String name) throws SQLException {
+        String sql = "Select a.id, a.Name, a.Price from Product a where a.NAME=?";
+
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        pstm.setString(1, name);
+
+        ResultSet rs = pstm.executeQuery();
+
+        while (rs.next()) {
+             name = rs.getString("Name");
+            int id=rs.getInt("id");
+            float price = rs.getFloat("Price");
+            Product product = new Product(id, name, price);
+            return product;
+        }
+        return null;
+    }
+
     public static void updateProduct(Connection conn, Product product) throws SQLException {
         String sql = "Update Product set Name =?, Price=? where id=? ";
 
@@ -145,13 +163,12 @@ public class DBUtils {
     }
 
     public static void insertProduct(Connection conn, Product product) throws SQLException {
-        String sql = "Insert into Product(id, Name,Price) values (?,?,?)";
+        String sql = "Insert into Product(Name,Price) values (?,?)";
 
         PreparedStatement pstm = conn.prepareStatement(sql);
 
-        pstm.setInt(1, product.getId());
-        pstm.setString(2, product.getName());
-        pstm.setFloat(3, product.getPrice());
+        pstm.setString(1, product.getName());
+        pstm.setFloat(2, product.getPrice());
 
         pstm.executeUpdate();
     }
@@ -197,31 +214,4 @@ public class DBUtils {
         return list;
     }
 
-//    public String findRole(Connection conn, UserAccount loginedUser) throws SQLException {
-//        String sql = "Select a.role from User_Account a "//
-//                + " where a.User_Name = ? ";
-//        PreparedStatement pstm = conn.prepareStatement(sql);
-//        String userName=loginedUser.getUserName();
-//        pstm.setString(1, userName);
-//        ResultSet rs = pstm.executeQuery();
-//        if (rs.next()) {
-//            String role=rs.getString("role");
-//            return role;
-//        }
-//        return null;
-//    }
-//
-//    public String findId(Connection conn, UserAccount loginedUser) throws SQLException {
-//        String sql = "Select a.id from User_Account a "//
-//                + " where a.User_Name = ? ";
-//        PreparedStatement pstm = conn.prepareStatement(sql);
-//        String userName=loginedUser.getUserName();
-//        pstm.setString(1, userName);
-//        ResultSet rs = pstm.executeQuery();
-//        if (rs.next()) {
-//            String id=rs.getString("id");
-//            return id;
-//        }
-//        return null;
-//    }
 }

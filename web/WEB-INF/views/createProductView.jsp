@@ -19,10 +19,7 @@
 
 <form method="POST" action="${pageContext.request.contextPath}/createProduct">
     <table border="0">
-        <tr>
-            <td>Code</td>
-            <td><input name="id" value="${syze}" readonly/></td>
-        </tr>
+
         <tr>
             <td>Name</td>
             <td><input type="text" name="name" value="${product.name}" /></td>

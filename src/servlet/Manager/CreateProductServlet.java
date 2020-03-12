@@ -4,7 +4,7 @@ package servlet.Manager;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,18 +32,14 @@ public class CreateProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
-        HttpSession session = request.getSession();
+
         String errorString = null;
-       int syze=0;
-        try {
-            syze = DBUtils.queryProduct(conn).size()+1;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            errorString = e.getMessage();
-        }
+        HttpSession session = request.getSession();
+
+
             UserAccount loginedUser = MyUtils.getLoginedUser(session);
 
-        if (loginedUser == null) {
+        if (loginedUser == null||loginedUser.getRole()==null) {
             // Redirect (Перенаправить) к странице login.
             response.sendRedirect(request.getContextPath() + "/login");
             return;
@@ -51,7 +47,7 @@ public class CreateProductServlet extends HttpServlet {
         // Сохранить информацию в request attribute перед тем как forward (перенаправить).
         request.setAttribute("user", loginedUser);
         request.setAttribute("errorString", errorString);
-        request.setAttribute("syze", syze);
+
 
 
         RequestDispatcher dispatcher = request.getServletContext()
@@ -66,29 +62,50 @@ public class CreateProductServlet extends HttpServlet {
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
 
-        int id =  Integer.parseInt(request.getParameter("id"));
+
         String name = (String) request.getParameter("name");
         String priceStr = (String) request.getParameter("price");
+        String errorString = null;
+        boolean hasError = false;
         float price = 0;
         try {
             price = Float.parseFloat(priceStr);
         } catch (Exception e) {
         }
-        Product product = new Product(id, name, price);
-        String errorString = null;
 
-        if (errorString == null) {
+        if (name == null || price == 0) {
+            hasError = true;
+            errorString = "Required name and price!";
+        }else {
+
+
             try {
-                DBUtils.insertProduct(conn, product);
-            } catch (SQLException e) {
+                Product product = DBUtils.findProductByName(conn, name);
+                if (product != null) {
+                    hasError = true;
+                    errorString = "This product already exist";
+                }
+                else {
+                     product = new Product(name, price);
+                    DBUtils.insertProduct(conn, product);
+                }
+            }  catch (SQLException e)
+            {
                 e.printStackTrace();
+                hasError = true;
                 errorString = e.getMessage();
             }
-        }
 
+
+        }
         // Сохранить информацию в request attribute перед тем как forward к views.
-        request.setAttribute("errorString", errorString);
-        request.setAttribute("product", product);
+        if (hasError) {
+            request.setAttribute("errorString", errorString);
+            RequestDispatcher dispatcher //
+                    = this.getServletContext().getRequestDispatcher("/WEB-INF/views/createProductView.jsp");
+
+            dispatcher.forward(request, response);
+        }
         // Если имеется ошибка forward (перенаправления) к странице 'edit'.
         if (errorString != null) {
             RequestDispatcher dispatcher = request.getServletContext()
@@ -98,7 +115,7 @@ public class CreateProductServlet extends HttpServlet {
         // Если все хорошо.
         // Redirect (перенаправить) к странице со списком продуктов.
         else {
-            response.sendRedirect(request.getContextPath() + "/productList");
+            response.sendRedirect(request.getContextPath() + "/admin");
         }
     }
 
