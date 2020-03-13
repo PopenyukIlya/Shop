@@ -22,11 +22,11 @@
 
         <tr>
             <td>Name</td>
-            <td><input type="text" name="name" value="${product.name}" /></td>
+            <td><input type="text" name="name" value="${name}" /></td>
         </tr>
         <tr>
             <td>Price</td>
-            <td><input type="text" name="price" value="${product.price}" /></td>
+            <td><input type="text" name="price" value="${price}" /></td>
         </tr>
         <tr>
             <td colspan="2">

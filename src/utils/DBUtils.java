@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Cart;
+import beans.Contact;
 import beans.Product;
 import beans.UserAccount;
 
@@ -214,4 +215,14 @@ public class DBUtils {
         return list;
     }
 
+    public static void insertContact(Connection conn, Contact contact) throws SQLException {
+        String sql = "Insert into user_contacts(user_account_id, address,phone_number) values (?,?,?)";
+
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        pstm.setInt(1, contact.getUser_account_id());
+        pstm.setString(2, contact.getAddress());
+        pstm.setString(3, contact.getPhone_number());
+
+        pstm.executeUpdate();
+    }
 }

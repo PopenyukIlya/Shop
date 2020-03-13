@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Create Product</title>
+    <title>Contacts</title>
 </head>
 <body>
 
@@ -17,21 +17,20 @@
 
 <p style="color: red;">${errorString}</p>
 
-<form method="POST" action="${pageContext.request.contextPath}/createProduct">
+<form method="POST" action="${pageContext.request.contextPath}/contacts">
     <table border="0">
-
         <tr>
-            <td>Name</td>
-            <td><input type="text" name="name" value="${product.name}" /></td>
+            <td>Address</td>
+            <td><input type="text" name="address" value="${address}" /></td>
         </tr>
         <tr>
-            <td>Price</td>
-            <td><input type="text" name="price" value="${product.price}" /></td>
+            <td>Phone num</td>
+            <td><input type="text" name="phone_number" value="${phone_number}" /></td>
         </tr>
         <tr>
             <td colspan="2">
                 <input type="submit" value="Submit" />
-                <a href="productList">Cancel</a>
+                <a href="userInfo">Cancel</a>
             </td>
         </tr>
     </table>

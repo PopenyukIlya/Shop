@@ -6,32 +6,39 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/beans/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/Manager/AdminServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/blacklist.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/orders.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/productListViewAdmin.jsp" afterDir="false" />
+    <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="added function: in user info dynamic link by role">
+      <change afterPath="$PROJECT_DIR$/src/beans/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/User/ContactsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/contacts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/productListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/productListView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/userInfoView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_menu.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/createProductView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/deleteProductErrorView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/editProductView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/homeView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/loginView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/productListView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/userInfoView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Manager/DeleteProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/DeleteProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Manager/EditProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/EditProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Unregistered/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Unregistered/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/User/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/User/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/CartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/User/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/User/UserInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/UserInfoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blacklist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/blacklist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/createProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/createProductView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/productListView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/productListView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/deleteProductErrorView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/deleteProductErrorView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/editProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/editProductView.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/productListViewAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/productListViewAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userInfoView.jsp" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,39 +58,46 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="order: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="cart: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="product: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="user_account: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - shop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="shop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user_contacts: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -114,39 +128,35 @@
     </option>
   </component>
   <component name="ProjectId" id="1Y6nLPfK0x2gpbe9FBXPt1mdDpu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\popen\OneDrive\Рабочий стол\shop\web\WEB-INF\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\popen\OneDrive\Рабочий стол\shop" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\popen\Desktop\shop\web\WEB-INF\views\Products" />
+      <recent name="C:\Users\popen\Desktop\shop\web\WEB-INF\views\Users" />
+      <recent name="C:\Users\popen\OneDrive\Рабочий стол\shop\web\WEB-INF\views" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.47" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.47" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 8.5.51" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.47" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="shop:war exploded">
@@ -219,6 +229,42 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.19398907" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:MySQL - shop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:MySQL - shop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@296650d8" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -245,6 +291,17 @@
       <workItem from="1583687198659" duration="593000" />
       <workItem from="1583858838669" duration="5406000" />
       <workItem from="1583912593702" duration="12033000" />
+      <workItem from="1584009825764" duration="241000" />
+      <workItem from="1584016608494" duration="1088000" />
+      <workItem from="1584017710726" duration="5000" />
+      <workItem from="1584023025789" duration="3344000" />
+      <workItem from="1584027825455" duration="260000" />
+      <workItem from="1584028130981" duration="819000" />
+      <workItem from="1584029186297" duration="92000" />
+      <workItem from="1584031300917" duration="5942000" />
+      <workItem from="1584088798062" duration="960000" />
+      <workItem from="1584090718428" duration="1665000" />
+      <workItem from="1584094701625" duration="5578000" />
     </task>
     <task id="LOCAL-00001" summary="make a few packages and classes for next development">
       <created>1582474218359</created>
@@ -274,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583269377084</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added function: in user info dynamic link by role">
+      <created>1584010047806</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584010047806</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +362,126 @@
     <MESSAGE value="day 2:added registration." />
     <MESSAGE value="day ?)):added cart." />
     <MESSAGE value="day 11:added cart,logout.." />
-    <option name="LAST_COMMIT_MESSAGE" value="day 11:added cart,logout.." />
+    <MESSAGE value="added function: in user info dynamic link by role" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function: in user info dynamic link by role" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="70" key="#Inspections" timestamp="1584023376742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1584023376742" />
+    <state x="361" y="70" key="#Project_Structure" timestamp="1584023490142">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1584023490142" />
+    <state x="465" y="22" key="#Tomcat_8.5.47" timestamp="1584016718178">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="22" key="#Tomcat_8.5.47/0.0.1536.824@0.0.1536.824" timestamp="1584016718178" />
+    <state x="360" y="70" key="#Tomcat_Server" timestamp="1584023421415">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="70" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1584023421415" />
+    <state x="360" y="70" key="#Web_Browsers" timestamp="1584039247520">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="70" key="#Web_Browsers/0.0.1536.824@0.0.1536.824" timestamp="1584039247520" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584040552497">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584040552497" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1584095045212">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584095045212" />
+    <state x="360" y="70" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584025904527">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="70" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1584025904527" />
+    <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584096511454">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584096511454" />
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1584023576293">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584023576293" />
+    <state x="449" y="217" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1584023756691">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="217" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1536.824@0.0.1536.824" timestamp="1584023756691" />
+    <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1584025578829">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584025578829" />
+    <state width="1179" height="2" key="GridCell.Tab.0.bottom" timestamp="1584103059974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584103059974" />
+    <state width="1179" height="2" key="GridCell.Tab.0.center" timestamp="1584103059974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584103059974" />
+    <state width="1179" height="2" key="GridCell.Tab.0.left" timestamp="1584103059974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584103059974" />
+    <state width="1179" height="2" key="GridCell.Tab.0.right" timestamp="1584103059974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584103059974" />
+    <state width="1179" height="212" key="GridCell.Tab.1.bottom" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.1.center" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.1.left" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.1.right" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.2.bottom" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.2.center" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.2.left" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="1179" height="212" key="GridCell.Tab.2.right" timestamp="1584103059874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1179" height="212" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1584103059874" />
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1584025811758">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1584025811758" />
+    <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1584028724973">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1584028724973" />
+    <state x="566" y="237" width="403" height="338" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1584095001696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="566" y="237" width="403" height="338" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1536.824@0.0.1536.824" timestamp="1584095001696" />
+    <state x="938" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584091469637">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="938" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1584091469637" />
+    <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584023027271">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="470" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584023027271" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -309,11 +492,6 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/DBUtils.java</url>
-          <line>213</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/User/CartServlet.java</url>
           <line>44</line>
           <option name="timeStamp" value="14" />
@@ -322,11 +500,6 @@
           <url>file://$PROJECT_DIR$/src/servlet/Unregistered/LoginServlet.java</url>
           <line>83</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/DBUtils.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

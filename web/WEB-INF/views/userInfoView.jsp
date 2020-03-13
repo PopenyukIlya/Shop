@@ -17,7 +17,7 @@ User Name: <b>${user.userName}</b>
 <br />
 Gender: ${user.gender} <br />
 
-
+<a href="${pageContext.request.contextPath}/contacts">Контактные данные</a>
 <a href="${pageContext.request.contextPath}/${link}">${linkName}</a>
 <jsp:include page="_footer.jsp"></jsp:include>
 
