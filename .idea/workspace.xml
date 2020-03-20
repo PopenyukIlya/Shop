@@ -6,38 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="added function: in user info dynamic link by role">
-      <change afterPath="$PROJECT_DIR$/src/beans/Contact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/User/ContactsServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/views/contacts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d72164e3-3ac2-4446-a6fc-c3c8c35fe548.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d14d7f6a-91a9-4df9-b5e1-e6ede29e8053" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/classes/utils/DBUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/_menu.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/createProductView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/deleteProductErrorView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/editProductView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/homeView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/loginView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/productListView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/shop_war_exploded/WEB-INF/views/userInfoView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/Manager/CreateProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/User/ContactsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/User/ContactsServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/DBUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DBUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/blacklist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/blacklist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/createProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/createProductView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/deleteProductErrorView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/deleteProductErrorView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/editProductView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/editProductView.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/productListViewAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/productListViewAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/views/userInfoView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/views/userInfoView.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,16 +221,12 @@
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:MySQL - shop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:MySQL - shop@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@296650d8" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2127cd94" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -301,7 +271,9 @@
       <workItem from="1584031300917" duration="5942000" />
       <workItem from="1584088798062" duration="960000" />
       <workItem from="1584090718428" duration="1665000" />
-      <workItem from="1584094701625" duration="5578000" />
+      <workItem from="1584094701625" duration="6842000" />
+      <workItem from="1584170719152" duration="990000" />
+      <workItem from="1584687812953" duration="4056000" />
     </task>
     <task id="LOCAL-00001" summary="make a few packages and classes for next development">
       <created>1582474218359</created>
@@ -338,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584010047806</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added function: user_contacts insert">
+      <created>1584103187566</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584103187566</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added function: user_contacts insert">
+      <created>1584103221989</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584103221989</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +349,8 @@
     <MESSAGE value="day ?)):added cart." />
     <MESSAGE value="day 11:added cart,logout.." />
     <MESSAGE value="added function: in user info dynamic link by role" />
-    <option name="LAST_COMMIT_MESSAGE" value="added function: in user info dynamic link by role" />
+    <MESSAGE value="added function: user_contacts insert" />
+    <option name="LAST_COMMIT_MESSAGE" value="added function: user_contacts insert" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Inspections" timestamp="1584023376742">
@@ -402,10 +389,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1584096511454" />
-    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1584103186532">
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1584103221388">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584103186532" />
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584103221388" />
     <state x="449" y="217" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1584023756691">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -414,54 +401,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584025578829" />
-    <state width="1179" height="2" key="GridCell.Tab.0.bottom" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.0.bottom" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.0.center" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.0.center" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.0.left" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.0.left" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.0.right" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.0.right" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.1.bottom" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.1.bottom" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.1.center" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.1.center" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.1.left" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.1.left" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.1.right" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.1.right" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.2.bottom" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.2.bottom" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.2.center" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.2.center" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.2.left" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.2.left" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
-    <state width="1179" height="2" key="GridCell.Tab.2.right" timestamp="1584103202717">
+    <state width="1179" height="365" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
+    <state width="1179" height="365" key="GridCell.Tab.2.right" timestamp="1584691895898">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1179" height="2" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1584103202717" />
+    <state width="1179" height="365" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1584691895898" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1584025811758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -470,14 +457,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="490" y="154" width="540" height="524" key="StructurePopup/0.0.1536.824@0.0.1536.824" timestamp="1584028724973" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1584103224969">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584103224969" />
     <state x="566" y="237" width="403" height="338" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1584095001696">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="566" y="237" width="403" height="338" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1536.824@0.0.1536.824" timestamp="1584095001696" />
-    <state x="938" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584091469637">
+    <state x="938" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1584103943941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="938" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1584091469637" />
+    <state x="938" y="66" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1584103943941" />
     <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584023027271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

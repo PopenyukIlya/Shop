@@ -66,7 +66,7 @@ public class DBUtils {
 
 
     public static void insertUser(Connection conn, UserAccount userAccount) throws SQLException {
-        String sql = "Insert into user_account(USER_NAME, GENDER,PASSWORD) values (?,?,?)";
+        String sql = "INSERT into user_account(USER_NAME, GENDER,PASSWORD) values (?,?,?)";
 
         PreparedStatement pstm = conn.prepareStatement(sql);
 
@@ -211,8 +211,9 @@ public class DBUtils {
             cart.setProduct_id(product_id);
             cart.setQuantity(quantity);
             list.add(cart);
+            return list;
         }
-        return list;
+        return null;
     }
 
     public static void insertContact(Connection conn, Contact contact) throws SQLException {
@@ -223,6 +224,36 @@ public class DBUtils {
         pstm.setString(2, contact.getAddress());
         pstm.setString(3, contact.getPhone_number());
 
+        pstm.executeUpdate();
+    }
+
+    public static Contact  findContacts(Connection conn, UserAccount loginedUser) throws SQLException {
+        String sql = "Select a.user_account_id, a.address, a.phone_number from user_contacts a where a.user_account_id=?";
+
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        int user_account_id=loginedUser.getId();
+        pstm.setInt(1, user_account_id);
+
+        ResultSet rs = pstm.executeQuery();
+
+        while (rs.next()) {
+            user_account_id = rs.getInt("user_account_id");
+            String address=rs.getString("address");
+            String phone_number = rs.getString("phone_number");
+            Contact contact = new Contact(user_account_id,address,phone_number);
+            return contact;
+        }
+        return null;
+    }
+
+    public static void updateContact(Connection conn, Contact contact) throws SQLException {
+        String sql = "Update user_contacts set address =?, phone_number=? where user_account_id=? ";
+
+        PreparedStatement pstm = conn.prepareStatement(sql);
+
+        pstm.setString(1, contact.getAddress());
+        pstm.setString(2, contact.getPhone_number());
+        pstm.setInt(3, contact.getUser_account_id());
         pstm.executeUpdate();
     }
 }

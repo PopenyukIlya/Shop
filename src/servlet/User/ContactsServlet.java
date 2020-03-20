@@ -31,20 +31,30 @@ public class ContactsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-
+        String address;
+        String number;
         String errorString = null;
         HttpSession session = request.getSession();
-
-
+        Connection conn = MyUtils.getStoredConnection(request);
         UserAccount loginedUser = MyUtils.getLoginedUser(session);
+
 
         if (loginedUser == null) {
             // Redirect (Перенаправить) к странице login.
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
-        // Сохранить информацию в request attribute перед тем как forward (перенаправить).
+        try {
+            Contact contact=DBUtils.findContacts(conn,loginedUser);
+            address=contact.getAddress();
+            number=contact.getPhone_number();
+            // Сохранить информацию в request attribute перед тем как forward (перенаправить).
+            request.setAttribute("address", address);
+            request.setAttribute("phone_number", number);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         request.setAttribute("user", loginedUser);
         request.setAttribute("errorString", errorString);
 
@@ -70,9 +80,13 @@ public class ContactsServlet extends HttpServlet {
             errorString = "Required name and price!";
         }else {
             try {
-                    Contact contact = new Contact(loginedUser.getId(),address, phone_number);
+                if (DBUtils.findContacts(conn,loginedUser)!=null){
+                    Contact contact = new Contact(loginedUser.getId(), address, phone_number);
+                    DBUtils.updateContact(conn, contact);
+                }else {
+                    Contact contact = new Contact(loginedUser.getId(), address, phone_number);
                     DBUtils.insertContact(conn, contact);
-                }
+                }}
              catch (SQLException e)
             {
                 e.printStackTrace();
@@ -80,7 +94,7 @@ public class ContactsServlet extends HttpServlet {
                 errorString = e.getMessage();
             }
         }
-        // Сохранить информацию в request attribute перед тем как forward к views.
+
         if (hasError) {
             request.setAttribute("errorString", errorString);
             RequestDispatcher dispatcher //
@@ -88,14 +102,13 @@ public class ContactsServlet extends HttpServlet {
 
             dispatcher.forward(request, response);
         }
-        // Если имеется ошибка forward (перенаправления) к странице 'edit'.
+
         if (errorString != null) {
             RequestDispatcher dispatcher = request.getServletContext()
                     .getRequestDispatcher("/WEB-INF/views/userInfo.jsp");
             dispatcher.forward(request, response);
         }
-        // Если все хорошо.
-        // Redirect (перенаправить) к странице со списком продуктов.
+
         else {
             response.sendRedirect(request.getContextPath() + "/userInfo");
         }
