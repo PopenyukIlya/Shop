@@ -37,6 +37,11 @@ public class UserAccount {
         this.password = password;
     }
 
+    public UserAccount(int id, String userName) {
+        this.id = id;
+        this.userName = userName;
+    }
+
     public int getId() {        return id;    }
 
     public void setId(int id) {        this.id = id;    }

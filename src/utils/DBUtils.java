@@ -16,17 +16,13 @@ public class DBUtils {
 
     public static UserAccount findUser(Connection conn, //
                                        String userName, String password) throws SQLException {
-
         String sql = "Select a.id, a.Gender,a.role from User_Account a " //
                 + " where a.User_Name = ? and a.password= ?";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, userName);
         pstm.setString(2, password);
         ResultSet rs = pstm.executeQuery();
-
         if (rs.next()) {
-
             int id=rs.getInt("id");
             String gender = rs.getString("Gender");
             String role=rs.getString("role");
@@ -63,13 +59,21 @@ public class DBUtils {
         return null;
     }
 
-
+    public static boolean findUserInBlackList(Connection conn, int user_account_id) throws SQLException {
+        String sql = "Select a.user_account_id from users_blacklist a where a.user_account_id = ? ";
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        pstm.setInt(1, user_account_id);
+        ResultSet rs = pstm.executeQuery();
+        boolean exist;
+        if (rs.next()) {
+            exist=true;
+        }else exist=false;
+      return exist;
+    }
 
     public static void insertUser(Connection conn, UserAccount userAccount) throws SQLException {
         String sql = "INSERT into user_account(USER_NAME, GENDER,PASSWORD) values (?,?,?)";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         pstm.setString(1, userAccount.getUserName());
         pstm.setString(2, userAccount.getGender());
         pstm.setString(3, userAccount.getPassword());
@@ -79,9 +83,7 @@ public class DBUtils {
 
     public static List<Product> Product(Connection conn) throws SQLException {
         String sql = "Select a.id, a.Name, a.Price from Product a ";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         ResultSet rs = pstm.executeQuery();
         List<Product> list = new ArrayList<Product>();
         while (rs.next()) {
@@ -98,9 +100,7 @@ public class DBUtils {
     }
     public static List<Product> queryProduct(Connection conn) throws SQLException {
         String sql = "Select a.id, a.Name, a.Price from Product a ";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         ResultSet rs = pstm.executeQuery();
         List<Product> list = new ArrayList<Product>();
         while (rs.next()) {
@@ -118,12 +118,9 @@ public class DBUtils {
 
     public static Product findProduct(Connection conn, String code) throws SQLException {
         String sql = "Select a.id, a.Name, a.Price from Product a where a.id=?";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, code);
-
         ResultSet rs = pstm.executeQuery();
-
         while (rs.next()) {
             int id=rs.getInt("id");
             String name = rs.getString("Name");
@@ -136,12 +133,9 @@ public class DBUtils {
 
     public static Product findProductByName(Connection conn, String name) throws SQLException {
         String sql = "Select a.id, a.Name, a.Price from Product a where a.NAME=?";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setString(1, name);
-
         ResultSet rs = pstm.executeQuery();
-
         while (rs.next()) {
              name = rs.getString("Name");
             int id=rs.getInt("id");
@@ -154,9 +148,7 @@ public class DBUtils {
 
     public static void updateProduct(Connection conn, Product product) throws SQLException {
         String sql = "Update Product set Name =?, Price=? where id=? ";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         pstm.setString(1, product.getName());
         pstm.setFloat(2, product.getPrice());
         pstm.setInt(3, product.getId());
@@ -165,30 +157,22 @@ public class DBUtils {
 
     public static void insertProduct(Connection conn, Product product) throws SQLException {
         String sql = "Insert into Product(Name,Price) values (?,?)";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         pstm.setString(1, product.getName());
         pstm.setFloat(2, product.getPrice());
-
         pstm.executeUpdate();
     }
 
     public static void deleteProduct(Connection conn, int id) throws SQLException {
         String sql = "Delete From shop.product where id= ?";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         pstm.setInt(1, id);
-
         pstm.executeUpdate();
     }
 
     public static void addProduct(Connection conn, Cart cart) throws SQLException {
             String sql = "Insert into cart(user_account_id, product_id,quantity) values (?,?,?)";
-
             PreparedStatement pstm = conn.prepareStatement(sql);
-
             pstm.setInt(1, cart.getUser_account_id());
             pstm.setInt(2, cart.getProduct_id());
             pstm.setInt(3, cart.getQuantity());
@@ -211,31 +195,26 @@ public class DBUtils {
             cart.setProduct_id(product_id);
             cart.setQuantity(quantity);
             list.add(cart);
-            return list;
+
         }
-        return null;
+        return list;
     }
 
     public static void insertContact(Connection conn, Contact contact) throws SQLException {
         String sql = "Insert into user_contacts(user_account_id, address,phone_number) values (?,?,?)";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setInt(1, contact.getUser_account_id());
         pstm.setString(2, contact.getAddress());
         pstm.setString(3, contact.getPhone_number());
-
         pstm.executeUpdate();
     }
 
     public static Contact  findContacts(Connection conn, UserAccount loginedUser) throws SQLException {
         String sql = "Select a.user_account_id, a.address, a.phone_number from user_contacts a where a.user_account_id=?";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
         int user_account_id=loginedUser.getId();
         pstm.setInt(1, user_account_id);
-
         ResultSet rs = pstm.executeQuery();
-
         while (rs.next()) {
             user_account_id = rs.getInt("user_account_id");
             String address=rs.getString("address");
@@ -248,12 +227,33 @@ public class DBUtils {
 
     public static void updateContact(Connection conn, Contact contact) throws SQLException {
         String sql = "Update user_contacts set address =?, phone_number=? where user_account_id=? ";
-
         PreparedStatement pstm = conn.prepareStatement(sql);
-
         pstm.setString(1, contact.getAddress());
         pstm.setString(2, contact.getPhone_number());
         pstm.setInt(3, contact.getUser_account_id());
+        pstm.executeUpdate();
+    }
+
+    public static List<UserAccount> queryUsers(Connection conn) throws SQLException {
+        String sql = "Select a.id, a.user_name from user_account a ";
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        ResultSet rs = pstm.executeQuery();
+        List<UserAccount> list = new ArrayList<UserAccount>();
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("USER_NAME");
+            UserAccount user = new UserAccount();
+            user.setId(id);
+            user.setUserName(name);
+            list.add(user);
+        }
+        return list;
+    }
+
+    public static void addToBlackList(Connection conn, int user_id) throws SQLException {
+        String sql = "Insert into users_blacklist(user_account_id) values (?)";
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        pstm.setInt(1, user_id);
         pstm.executeUpdate();
     }
 }

@@ -45,12 +45,17 @@ public class ContactsServlet extends HttpServlet {
             return;
         }
         try {
+            if (DBUtils.findContacts(conn,loginedUser)!=null){
             Contact contact=DBUtils.findContacts(conn,loginedUser);
             address=contact.getAddress();
             number=contact.getPhone_number();
             // Сохранить информацию в request attribute перед тем как forward (перенаправить).
             request.setAttribute("address", address);
-            request.setAttribute("phone_number", number);
+            request.setAttribute("phone_number", number);}
+            else {
+                request.setAttribute("address", null);
+                request.setAttribute("phone_number", null);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

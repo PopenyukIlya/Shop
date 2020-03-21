@@ -1115,102 +1115,108 @@
     <table id="280" parent="5" name="product"/>
     <table id="281" parent="5" name="user_account"/>
     <table id="282" parent="5" name="user_contacts"/>
-    <column id="283" parent="279" name="user_account_id">
+    <table id="283" parent="5" name="users_blacklist"/>
+    <column id="284" parent="279" name="user_account_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="279" name="product_id">
+    <column id="285" parent="279" name="product_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="279" name="quantity">
+    <column id="286" parent="279" name="quantity">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="280" name="id">
+    <column id="287" parent="280" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="280" name="NAME">
+    <column id="288" parent="280" name="NAME">
       <Position>2</Position>
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="280" name="PRICE">
+    <column id="289" parent="280" name="PRICE">
       <Position>3</Position>
       <DataType>float|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="289" parent="280" name="PRIMARY">
+    <key id="290" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="290" parent="281" name="USER_NAME">
+    <column id="291" parent="281" name="USER_NAME">
       <Position>1</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="281" name="GENDER">
+    <column id="292" parent="281" name="GENDER">
       <Position>2</Position>
       <DataType>varchar(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="281" name="PASSWORD">
+    <column id="293" parent="281" name="PASSWORD">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="281" name="id">
+    <column id="294" parent="281" name="id">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="281" name="role">
+    <column id="295" parent="281" name="role">
       <Position>5</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="295" parent="281" name="id_UNIQUE">
+    <index id="296" parent="281" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="296" parent="281" name="PRIMARY">
+    <key id="297" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="297" parent="281" name="id_UNIQUE">
+    <key id="298" parent="281" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="298" parent="282" name="user_account_id">
+    <column id="299" parent="282" name="user_account_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="282" name="address">
+    <column id="300" parent="282" name="address">
       <Position>2</Position>
       <DataType>char(60)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="282" name="phone_number">
+    <column id="301" parent="282" name="phone_number">
       <Position>3</Position>
       <DataType>char(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="283" name="user_account_id">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
   </database-model>
