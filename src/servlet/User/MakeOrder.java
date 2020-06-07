@@ -1,6 +1,8 @@
 package servlet.User;
 
 import beans.Cart;
+import beans.Contact;
+import beans.Order;
 import beans.UserAccount;
 import utils.DBUtils;
 import utils.MyUtils;
@@ -16,11 +18,11 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-@WebServlet(urlPatterns = { "/addProduct" })
-public class AddToCart extends HttpServlet {
+@WebServlet(urlPatterns = { "/makeOrder" })
+public class MakeOrder extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    public AddToCart() {
+    public MakeOrder() {
         super();
     }
 
@@ -29,32 +31,48 @@ public class AddToCart extends HttpServlet {
             throws ServletException, IOException {
         Connection conn = MyUtils.getStoredConnection(request);
         HttpSession session = request.getSession();
-        int product_id = Integer.parseInt(request.getParameter("id"));
-        String product_name = request.getParameter("name");
-        float product_price = Float.parseFloat(request.getParameter("price"));
+        int product_id = Integer.parseInt(request.getParameter("id"));//можно обрабатывать кол-во на складе
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        float product_price = Float.parseFloat(request.getParameter("product_price"));
+        String product_name = request.getParameter("product_name");
 
 
         String errorString = null;
         UserAccount loginedUser = MyUtils.getLoginedUser(session);
-
+        try {
+            DBUtils.inBlackList(loginedUser.getId());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if (loginedUser == null) {
             // Redirect (Перенаправить) к странице login.
             response.sendRedirect(request.getContextPath() + "/login");
             return;
         }
-        int user_account_id= 0;
-        user_account_id = loginedUser.getId();
-        Cart cart=new Cart();
-        cart.setProduct_price(product_price);
-        cart.setProduct_name(product_name);
-        cart.setProduct_id(product_id);
-        cart.setUser_account_id(user_account_id);
-        cart.setQuantity(1);
+        String address;
+        String number;
+        Order order=new Order();
+        int user_account_id = loginedUser.getId();
+        //тут нужно по айди юзера найти его контакты
         try {
-            DBUtils.addProduct(conn, cart);
+            if (DBUtils.findContacts(conn,loginedUser)!=null){
+                Contact contact=DBUtils.findContacts(conn,loginedUser);
+                 address=contact.getAddress();
+                number=contact.getPhone_number();
+                order.setProduct_price(product_price);
+                order.setUserName(loginedUser.getUserName());
+                order.setName_product(product_name);
+                order.setQuantity(quantity);
+                order.setAddress_and_phone_number("Address:"+address+". Number:"+number);
+                DBUtils.addOrder(conn, order);
+              }
+            else {
+                //тут делать что-то если контактов юзера нет
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
 
         // Если происходит ошибка, forward (перенаправить) к странице оповещающей ошибку.
         if (errorString != null) {

@@ -29,7 +29,7 @@
             <td>${product.name}</td>
             <td>${product.price}</td>
             <td>
-                <a href="addProduct?id=${product.id}">Add to cart</a>
+                <a href="addProduct?id=${product.id}&name=${product.name}&price=${product.price}">Add to cart</a>
             </td>
         </tr>
     </c:forEach>

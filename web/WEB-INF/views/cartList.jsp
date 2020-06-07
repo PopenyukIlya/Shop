@@ -19,15 +19,18 @@
 <table border="1" cellpadding="5" cellspacing="1" >
     <tr>
         <th>Product id</th>
+        <th>Product name</th>
         <th>Quantity</th>
-
+        <th>Product price</th>
     </tr>
     <c:forEach items="${cartList}" var="cart" >
         <tr>
             <td>${cart.product_id}</td>
+            <td>${cart.product_name}</td>
             <td>${cart.quantity}</td>
+            <td>${cart.product_price}</td>
             <td>
-                <a href="addProduct?id=${cart.product_id}">Add to cart</a>
+                <a href="makeOrder?id=${cart.product_id}&quantity=${cart.quantity}&product_name=${cart.product_name}&product_price=${cart.product_price}">Make order</a>
             </td>
 
         </tr>

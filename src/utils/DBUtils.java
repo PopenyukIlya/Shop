@@ -7,10 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import beans.Cart;
-import beans.Contact;
-import beans.Product;
-import beans.UserAccount;
+import beans.*;
 
 public class DBUtils {
 
@@ -171,18 +168,20 @@ public class DBUtils {
     }
 
     public static void addProduct(Connection conn, Cart cart) throws SQLException {
-            String sql = "Insert into cart(user_account_id, product_id,quantity) values (?,?,?)";
+            String sql = "Insert into cart(user_account_id, product_id,quantity,product_name,product_price) values (?,?,?,?,?)";
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setInt(1, cart.getUser_account_id());
             pstm.setInt(2, cart.getProduct_id());
             pstm.setInt(3, cart.getQuantity());
+            pstm.setString(4, cart.getProduct_name());
+            pstm.setFloat(5,cart.getProduct_price());
 
             pstm.executeUpdate();
 
     }
 
     public static List<Cart> findCart(Connection conn, UserAccount loginedUser) throws SQLException {
-        String sql = "Select a.user_account_id, a.product_id, a.quantity from cart a where user_account_id=?";
+        String sql = "Select a.user_account_id, a.product_id, a.quantity, product_name, product_price from cart a where user_account_id=?";
         PreparedStatement pstm = conn.prepareStatement(sql);
         int user_account_id=loginedUser.getId();
         pstm.setInt(1, user_account_id);
@@ -191,8 +190,12 @@ public class DBUtils {
         while (rs.next()) {
             int product_id = rs.getInt("product_id");
             int quantity = rs.getInt("quantity");
+            String product_name=rs.getString("product_name");
+            float product_price=rs.getFloat("product_price");
             Cart cart = new Cart();
+            cart.setProduct_price(product_price);
             cart.setProduct_id(product_id);
+            cart.setProduct_name(product_name);
             cart.setQuantity(quantity);
             list.add(cart);
 
@@ -255,5 +258,21 @@ public class DBUtils {
         PreparedStatement pstm = conn.prepareStatement(sql);
         pstm.setInt(1, user_id);
         pstm.executeUpdate();
+    }
+
+    public static void addOrder(Connection conn, Order order) throws SQLException {
+        String sql = "Insert into orders(product_name,product_price,quantity,user_name,address_and_phone_number,completed) values (?,?,?,?,?,?)";
+        PreparedStatement pstm = conn.prepareStatement(sql);
+        pstm.setString(1, order.getName_product());
+        pstm.setFloat(2,order.getProduct_price());
+        pstm.setInt(3,order.getQuantity());
+        pstm.setString(4,order.getUserName());
+        pstm.setString(5,order.getAddress_and_phone_number());
+        pstm.setBoolean(6,false);
+        pstm.executeUpdate();
+    }
+
+    public static void inBlackList(int id) throws SQLException {
+
     }
 }
